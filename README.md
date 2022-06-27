@@ -2,6 +2,8 @@
 
 2022搜狐校园算法大赛NLP赛道第一名开源方案（实验代码）
 
+[方案介绍文章](https://zhuanlan.zhihu.com/p/533808475)
+
 该代码使用pytorch-lightning框架进行编写。**注意：该代码为我本人在初赛阶段实验和迭代使用的代码，并非用于复赛和决赛提交的代码，有部分trick没有加入，效果会比最终提交代码稍差。**
 
 核心代码段：
@@ -25,7 +27,6 @@ def _setup(self, data):
             labels = list(map(lambda x: x + 2, item["entity"].values()))
             output_item["labels"] = labels
         output.append(output_item)
-
 ```
 
 `model.py`的`forward`部分
